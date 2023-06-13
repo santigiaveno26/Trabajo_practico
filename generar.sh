@@ -10,7 +10,7 @@ fi
 cantidad_imagenes=$1
 
 # Directorio de destino para guardar las imágenes
-directorio_destino="/home/franciscoryb/Escritorio/TpFinal/descargas"
+directorio_destino="/home/santi_giaveno/Escritorio/TpFinal/descargas"
 
 # Verifica si el directorio de destino existe, si no, lo crea
 if [ ! -d "$directorio_destino" ]; then
@@ -34,5 +34,6 @@ for ((i = 1; i <= cantidad_imagenes; i++)); do
   curl -o "$directorio_destino/$nombre_archivo" "$redirect_url"
 
   echo "Imagen descargada: $nombre_archivo"
+	sleep 5	
 done
 
